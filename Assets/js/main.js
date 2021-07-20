@@ -2,7 +2,7 @@ const apiKey = "82e1dabba677d9f9c3e69ef718c67212"
 const units = "metric"
 
 const searchWeather = (cityName) => {
-   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`)
+   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`)
       .then(res => {
          return res.json();
       }).then(res =>{
