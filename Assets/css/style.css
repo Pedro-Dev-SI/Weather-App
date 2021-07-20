@@ -83,6 +83,67 @@ html, body{
    font-size: 20px;
 }
 
+@media screen and (max-width: 480px) {
+   .search-container{
+      width: 500px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   
+   .search-container input{
+      width: 250px;
+      font-size: 20px;
+   }
+   
+   .search-container button{
+      height: 35px;
+      width: 150px;
+      margin-top: 10px;
+   }
+
+   .weather-box{
+      margin-top: 50px;
+      width: 300px;
+      height: 365px;
+      background-image: url("../img/clear.png");
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 1px 1px 5px black;
+      visibility: hidden;
+   }
+   
+   .weather-box h3{
+      font-size: 30px;
+      color: rgb(254,255,255);
+      text-shadow: 2px 2px 1px #000;
+   }
+   
+   #temperature{
+      font-size: 50px;
+   }
+   
+   #description{
+      font-size: 30px;
+   }
+   
+   #weather-icon{
+      width: 60px;
+      height: 60px;
+   }
+   
+   #divider{
+      border: solid 2px rgb(254,255,255);
+      border-radius: 3px;
+   }
+   
+   .footer-card{
+      font-size: 20px;
+   }
+}
+
 
 
 
