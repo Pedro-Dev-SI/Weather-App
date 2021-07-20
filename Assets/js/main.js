@@ -12,7 +12,6 @@ const searchWeather = (cityName) => {
 
 const init = (res) => {
 
-   console.log(res);
    let bodyCard = document.getElementById('weather-box');
 
    switch (res.weather[0].main){
