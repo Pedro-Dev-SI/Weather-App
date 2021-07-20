@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--Font Link-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="./Assets/css/style.css">
+   <title>Weather App</title>
+</head>
+<body>
+   <h1>Weather App</h1>
+
+   <div class="search-container">
+      <input id="city-input" name="city-input" class="search-input" type="text" placeholder="Search for a City" autofocus>
+      <button id="search-btn">Search</button>
+   </div>
+
+   <div id="weather-box" class="weather-box">
+      <h3 id="city-name">Portland</h3>
+      <div id="weather-info">
+         <div id="description-info">
+            <div id="temperature">16°</div>
+            <div id="description">Cloudy</div>
+         </div>
+         <div id="icon-box"><img id="weather-icon" src="http://openweathermap.org/img/wn/02d.png"></div>
+      </div>
+      <hr id="divider">
+      <div id="wind-speed" class="footer-card">Wind speed at 5m/s</div>
+      <div id="weather-humidity" class="footer-card">Humidity levels at 50%</div>
+   </div>
+
+   <script src="./Assets/js/main.js"></script>
+</body>
+</html>
