@@ -25,22 +25,22 @@ const init = (res) => {
          break;
 
       case 'Rain':
-         bodyCard.style.backgroundImage = "url(./img/rain.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/rain.png)"
          break;
 
       case 'Mist':
-         bodyCard.style.backgroundImage = "url(./img/mist.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/mist.png)"
          break;
 
       case 'Drizzle':
-         bodyCard.style.backgroundImage = "url(./img/drizzle.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/drizzle.png)"
          break;
 
       case 'Thunderstorm':
-         bodyCard.style.backgroundImage = "url(./img/thunder.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/thunder.png)"
          break;
       case 'Snow':
-         bodyCard.style.backgroundImage = "url(./img/snow.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/snow.png)"
          break;
       default:
          break;
