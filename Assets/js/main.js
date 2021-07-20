@@ -17,11 +17,11 @@ const init = (res) => {
 
    switch (res.weather[0].main){
       case 'Clear':
-         bodyCard.style.backgroundImage = "url(./img/clear.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/clear.png)"
          break;
          
       case 'Clouds':
-         bodyCard.style.backgroundImage = "url(./img/clouds.png)"
+         bodyCard.style.backgroundImage = "url(../Assets/img/clouds.png)"
          break;
 
       case 'Rain':
