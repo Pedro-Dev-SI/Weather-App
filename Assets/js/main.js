@@ -12,7 +12,7 @@ const searchWeather = (cityName) => {
 
 const init = (res) => {
 
-   
+   console.log(res);
    let bodyCard = document.getElementById('weather-box');
 
    switch (res.weather[0].main){
@@ -48,6 +48,7 @@ const init = (res) => {
    }
 
    let cityName = document.getElementById('city-name')
+   let country = document.getElementById('country')
    let temperature = document.getElementById('temperature')
    let description = document.getElementById('description')
    let weatherIcon = document.getElementById('weather-icon')
@@ -55,6 +56,7 @@ const init = (res) => {
    let humidityLevels = document.getElementById('weather-humidity')
 
    cityName.innerHTML = res.name
+   country.innerHTML = res.sys.country
    temperature.innerHTML = Math.floor(res.main.temp) + '&#176'
    let weatherDescription = res.weather[0].description
    description.innerText = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1)

@@ -55,10 +55,22 @@ html, body{
    visibility: hidden;
 }
 
+.local-info{
+   display: flex;
+
+}
+
 .weather-box h3{
    font-size: 35px;
    color: rgb(254,255,255);
    text-shadow: 2px 2px 1px #000;
+}
+
+.weather-box h4{
+   font-size: 30px;
+   color: rgb(254,255,255);
+   text-shadow: 2px 2px 1px #000;
+   margin-left: 20px;
 }
 
 #temperature{
@@ -119,6 +131,13 @@ html, body{
       font-size: 30px;
       color: rgb(254,255,255);
       text-shadow: 2px 2px 1px #000;
+   }
+
+   .weather-box h4{
+      font-size: 26px;
+      color: rgb(254,255,255);
+      text-shadow: 2px 2px 1px #000;
+      margin-left: 20px;
    }
    
    #temperature{
