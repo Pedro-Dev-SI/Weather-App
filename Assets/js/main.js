@@ -58,7 +58,7 @@ const init = (res) => {
    temperature.innerHTML = Math.floor(res.main.temp) + '&#176'
    let weatherDescription = res.weather[0].description
    description.innerText = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1)
-   weatherIcon.src = 'http://openweathermap.org/img/wn/' + res.weather[0].icon + '.png'
+   weatherIcon.src = 'https://openweathermap.org/img/wn/' + res.weather[0].icon + '.png'
    windSpeed.innerHTML = 'Wind speed at ' + Math.floor(res.wind.speed) + 'm/s'
    humidityLevels.innerHTML = 'Humidity levels at ' + res.main.humidity + '%'
 
