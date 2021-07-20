@@ -2,7 +2,7 @@ const apiKey = "82e1dabba677d9f9c3e69ef718c67212"
 const units = "metric"
 
 const searchWeather = (cityName) => {
-   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`)
+   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`)
       .then(res => {
          return res.json();
       }).then(res =>{
@@ -58,7 +58,7 @@ const init = (res) => {
    temperature.innerHTML = Math.floor(res.main.temp) + '&#176'
    let weatherDescription = res.weather[0].description
    description.innerText = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1)
-   weatherIcon.src = 'https://openweathermap.org/img/wn/' + res.weather[0].icon + '.png'
+   weatherIcon.src = 'http://openweathermap.org/img/wn/' + res.weather[0].icon + '.png'
    windSpeed.innerHTML = 'Wind speed at ' + Math.floor(res.wind.speed) + 'm/s'
    humidityLevels.innerHTML = 'Humidity levels at ' + res.main.humidity + '%'
 
