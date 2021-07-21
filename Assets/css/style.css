@@ -93,9 +93,21 @@ html, body{
 
 .footer-card{
    font-size: 20px;
+   color: rgb(254,255,255);
 }
 
 @media screen and (max-width: 480px) {
+
+   body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      max-height: 100vh;
+      overflow: hidden;
+      background-image: none;
+      background-color: rgb(226,210,210);
+   }
+
    .search-container{
       width: 500px;
       height: 80px;
@@ -108,12 +120,14 @@ html, body{
    .search-container input{
       width: 250px;
       font-size: 20px;
+      outline: none;
    }
    
    .search-container button{
       height: 35px;
       width: 150px;
       margin-top: 10px;
+      outline: none;
    }
 
    .weather-box{
