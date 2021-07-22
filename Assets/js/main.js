@@ -1,6 +1,7 @@
 const apiKey = "82e1dabba677d9f9c3e69ef718c67212"
 const units = "metric"
 let horas = new Date()
+let horaAtual = horas.getHours()
 
 const searchWeather = (cityName) => {
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`)
@@ -21,12 +22,12 @@ const init = (res) => {
    let weatherIcon = document.getElementById('weather-icon')
    let windSpeed = document.getElementById('wind-speed')
    let humidityLevels = document.getElementById('weather-humidity')
-   // res.weather[0].main
+      
 
-   switch ('Snow'){
+   switch (res.weather[0].main){
       case 'Clear':
          
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/clear.png)"
          }else{
             bodyCard.style.backgroundImage = "url(../Assets/img/clear.png)"
@@ -36,8 +37,10 @@ const init = (res) => {
          
       case 'Clouds':
 
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/clouds-night.png)"
+            temperature.style.color = 'white'
+            description.style.color = 'white'
          }else{
             bodyCard.style.backgroundImage = "url(../Assets/img/clouds.png)"
          }
@@ -46,7 +49,7 @@ const init = (res) => {
 
       case 'Rain':
 
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/rain-night.png)"
             temperature.style.color = 'white'
             description.style.color = 'white'
@@ -58,7 +61,7 @@ const init = (res) => {
          break;
 
       case 'Mist':
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/mist-night.png)"
          }else{
             bodyCard.style.backgroundImage = "url(../Assets/img/mist.png)"
@@ -68,7 +71,7 @@ const init = (res) => {
 
       case 'Drizzle':
          
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/drizzle-night.png)"
          }else{
             bodyCard.style.backgroundImage = "url(../Assets/img/drizzle.png)"
@@ -77,14 +80,14 @@ const init = (res) => {
 
       case 'Thunderstorm':
          
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/thunder-night.png)"
          }else{
             bodyCard.style.backgroundImage = "url(../Assets/img/thunder.png)"
          }
          break;
       case 'Snow':
-         if(horas.getHours() >= 18 && horas.getHours() < 6){
+         if(horaAtual >= 18 && horaAtual < 6){
             bodyCard.style.backgroundImage = "url(../Assets/img/snow-night.png)"
             temperature.style.color = 'white'
             description.style.color = 'white'
