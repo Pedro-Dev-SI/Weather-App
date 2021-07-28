@@ -3,13 +3,21 @@ const units = "metric"
 let horas = new Date()
 let horaAtual = horas.getHours()
 
+
 const searchWeather = (cityName) => {
+
+   
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`)
-      .then(res => {
-         return res.json();
-      }).then(res =>{
+   .then(res => {
+      return res.json();
+   }).then(res =>{
+      try{
          init(res)
-      }) 
+      }catch(e){
+         mostraErro();
+      }
+   })
+   
 }
 
 const init = (res) => {
@@ -119,6 +127,25 @@ const init = (res) => {
 const setWeatherCard = () => {
    let weatherBox = document.getElementById('weather-box')
    weatherBox.style.visibility = 'visible'
+
+   let cardErro = document.getElementById('card-erro')
+   cardErro.style.visibility = 'hidden'
+}
+
+const mostraErro = () => {
+   
+   let cardErro = document.getElementById('card-erro')
+   cardErro.style.visibility = 'visible';
+
+   let weatherBox = document.getElementById('weather-box')
+   weatherBox.style.visibility = 'hidden'
+   
+}
+
+const limpaInput = () => {
+   const inputCity = document.getElementById('city-input');
+   inputCity.value = '';
+   inputCity.focus();
 }
 
 document.getElementById('search-btn').addEventListener('click', () => {
@@ -126,6 +153,8 @@ document.getElementById('search-btn').addEventListener('click', () => {
 
    if(city){
       searchWeather(city)
+      limpaInput();
    }
 })
+
 
