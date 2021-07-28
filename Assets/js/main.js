@@ -35,72 +35,72 @@ const init = (res) => {
    switch (res.weather[0].main){
       case 'Clear':
          
-         if(horaAtual >= 18 && horaAtual < 6){
+         if(horaAtual >= 6 && horaAtual <= 18){
             bodyCard.style.backgroundImage = "url(../Assets/img/clear.png)"
          }else{
-            bodyCard.style.backgroundImage = "url(../Assets/img/clear.png)"
+            bodyCard.style.backgroundImage = "url(../Assets/img/clear-night.png)"
          }
 
          break;
          
       case 'Clouds':
 
-         if(horaAtual >= 18 && horaAtual < 6){
+         if(horaAtual >= 6 && horaAtual <= 18){
+            bodyCard.style.backgroundImage = "url(../Assets/img/clouds.png)"
+         }else{       
             bodyCard.style.backgroundImage = "url(../Assets/img/clouds-night.png)"
             temperature.style.color = 'white'
             description.style.color = 'white'
-         }else{
-            bodyCard.style.backgroundImage = "url(../Assets/img/clouds.png)"
          }
 
          break;
 
       case 'Rain':
 
-         if(horaAtual >= 18 && horaAtual < 6){
+         if(horaAtual >= 6 && horaAtual <= 18){
+            bodyCard.style.backgroundImage = "url(../Assets/img/rain.png)"
+         }else{    
             bodyCard.style.backgroundImage = "url(../Assets/img/rain-night.png)"
             temperature.style.color = 'white'
             description.style.color = 'white'
-         }else{
-            bodyCard.style.backgroundImage = "url(../Assets/img/rain.png)"
          }
 
          
          break;
 
       case 'Mist':
-         if(horaAtual >= 18 && horaAtual < 6){
-            bodyCard.style.backgroundImage = "url(../Assets/img/mist-night.png)"
-         }else{
+         if(horaAtual >= 6 && horaAtual <= 18){
             bodyCard.style.backgroundImage = "url(../Assets/img/mist.png)"
+         }else{        
+            bodyCard.style.backgroundImage = "url(../Assets/img/mist-night.png)"
          }
          
          break;
 
       case 'Drizzle':
          
-         if(horaAtual >= 18 && horaAtual < 6){
-            bodyCard.style.backgroundImage = "url(../Assets/img/drizzle-night.png)"
-         }else{
+         if(horaAtual >= 6 && horaAtual <= 18){
             bodyCard.style.backgroundImage = "url(../Assets/img/drizzle.png)"
+         }else{
+            bodyCard.style.backgroundImage = "url(../Assets/img/drizzle-night.png)" 
          }
          break;
 
       case 'Thunderstorm':
          
-         if(horaAtual >= 18 && horaAtual < 6){
-            bodyCard.style.backgroundImage = "url(../Assets/img/thunder-night.png)"
-         }else{
+         if(horaAtual >= 6 && horaAtual <= 18){
             bodyCard.style.backgroundImage = "url(../Assets/img/thunder.png)"
+         }else{      
+            bodyCard.style.backgroundImage = "url(../Assets/img/thunder-night.png)"
          }
          break;
       case 'Snow':
-         if(horaAtual >= 18 && horaAtual < 6){
+         if(horaAtual >= 6 && horaAtual <= 18){
+            bodyCard.style.backgroundImage = "url(../Assets/img/snow.png)"
+         }else{ 
             bodyCard.style.backgroundImage = "url(../Assets/img/snow-night.png)"
             temperature.style.color = 'white'
             description.style.color = 'white'
-         }else{
-            bodyCard.style.backgroundImage = "url(../Assets/img/snow.png)"
          }
          
          break;
