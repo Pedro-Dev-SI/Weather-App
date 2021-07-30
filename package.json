@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedro-Dev-SI/Weather-App.git"
+  },
+  "author": "Pedro Selvate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedro-Dev-SI/Weather-App/issues"
+  },
+  "homepage": "https://github.com/Pedro-Dev-SI/Weather-App#readme"
+}
